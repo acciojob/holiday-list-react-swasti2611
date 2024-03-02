@@ -32,10 +32,15 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
-    
+    let filtered=cityList.filter((item)=>item.country ==='India')
   return (
     <div id="main">
                {/* Do not remove the main div */}
+              <ol>
+                {
+                  filtered.map((Item,index)=><li key={`location +${index+1}`}>{Item.name}</li>)
+                }
+              </ol>
     </div>
   )
 }
